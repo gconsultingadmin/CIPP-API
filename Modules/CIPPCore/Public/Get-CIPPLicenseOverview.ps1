@@ -62,7 +62,7 @@ function Get-CIPPLicenseOverview {
                 availableUnits = [string]$sku.prepaidUnits.enabled - $sku.consumedUnits
                 TermInfo       = [string]($TermInfo | ConvertTo-Json -Depth 10 -Compress)
                 'PartitionKey' = 'License'
-                'RowKey'       = "$($singlereq.Tenant) - $($sku.skuid) - $($Term)"
+                'RowKey'       = "$($singlereq.Tenant) - $($sku.skuid)"
             }      
         }
     }
